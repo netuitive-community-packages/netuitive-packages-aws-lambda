@@ -1,0 +1,64 @@
+{
+  "id" : "netuitive.packages.aws.lambda",
+  "version" : "1.0.0",
+  "manifest" : {
+    "name" : "Netuitive Packages AWS Lambda",
+    "description" : "A set of Netuitive analytics configurations, polices, dashboards, and reports that are used to monitor performance of AWS Lambda functions.",
+    "author" : {
+      "name" : "Netuitive Research",
+      "email" : "research@netuitive.com"
+    },
+    "distro" : {
+      "logo" : "http://assets.app.netuitive.com/pkg/logo/netuitive/banner_logo.png",
+      "download" : "https://github.com/netuitive-community-packages/netuitive-packages-aws-lambda/archive/master.zip"
+    },
+    "compatibility" : [ "AWS:Lambda" ],
+    "tags" : [ ],
+    "checksum" : null
+  },
+  "policies" : [ {
+    "data" : {
+      "file" : "policies/aws.lambda.-.elevated.invocation.count.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/aws.lambda.-.elevated.latency.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  } ],
+  "analyticConfigurations" : [ {
+    "data" : {
+      "file" : "analyticConfigurations/ace-aws.lambda.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "analyticConfigurations/computed_metric-aws.lambda.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "analyticConfigurations/metric_meta-aws.lambda.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  } ],
+  "dashboards" : [ {
+    "data" : {
+      "file" : "dashboards/aws.lambda.element.detail.page.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "dashboards/aws.lambda.summary.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  } ]
+}

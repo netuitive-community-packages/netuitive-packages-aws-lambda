@@ -1,0 +1,41 @@
+{
+  "analyticConfiguration" : {
+    "tenantId" : null,
+    "type" : "METRIC_META",
+    "id" : null,
+    "packageId" : null,
+    "name" : "AWS Lambda",
+    "scope" : {
+      "elementName" : null,
+      "elementType" : "LAMBDA",
+      "elementTags" : null,
+      "metricMatches" : null
+    },
+    "metrics" : [ {
+      "match" : "aws.lambda.duration",
+      "properties" : {
+        "SparseDataStrategy" : "ReplaceWithZero",
+        "tags" : {
+          "unit" : "milliseconds"
+        }
+      }
+    }, {
+      "match" : "aws.lambda.(errors|invocations|throttles)",
+      "properties" : {
+        "SparseDataStrategy" : "ReplaceWithZero",
+        "statistic" : "sum",
+        "tags" : {
+          "unit" : "count"
+        }
+      }
+    }, {
+      "match" : "netuitive.*",
+      "properties" : {
+        "tags" : {
+          "unit" : "percent"
+        },
+        "validMax" : 100
+      }
+    } ]
+  }
+}
