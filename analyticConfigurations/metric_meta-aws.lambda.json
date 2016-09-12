@@ -16,7 +16,7 @@
       "properties" : {
         "SparseDataStrategy" : "ReplaceWithZero",
         "tags" : {
-          "unit" : "milliseconds"
+          "unit" : "ms"
         }
       }
     }, {
