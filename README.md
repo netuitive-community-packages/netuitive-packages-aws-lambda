@@ -1,8 +1,12 @@
-#netuitive.packages.aws.lambda 1.0.1
+#netuitive.packages.aws.lambda 1.1.0
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/AWS/new_aws_datasource.htm).
 
 ##Release History
+
+###Version 1.1.0
+
+* Added a new policy to alarm when invocation count is lower than expected.
 
 ###Version 1.0.1
 
