@@ -1,8 +1,12 @@
-#netuitive.packages.aws.lambda 1.1.0
+#netuitive.packages.aws.lambda 1.2.0
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/aws.htm).
 
 ##Release History
+
+###Version 1.2.0
+
+* Updated gridstack dashboard layouts 
 
 ###Version 1.1.0
 
