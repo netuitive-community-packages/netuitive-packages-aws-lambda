@@ -8,7 +8,8 @@
       "timeRangeDuration" : "3600",
       "density" : "normal",
       "refreshIntervalSeconds" : "300",
-      "wrap" : "true"
+      "wrap" : "true",
+      "gridstackContents": "[{\"id\":\"e08c0662-95a5-4cac-bac1-a215d380be03\",\"x\":0,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"d799fc20-caa8-4c27-89a1-378517fbf0d6\",\"x\":8,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"be4b06d6-85b5-4ba0-b92a-b9a359fb49a0\",\"x\":4,\"y\":0,\"width\":4,\"height\":9}]"
     },
     "tenantId" : null,
     "userId" : null,
