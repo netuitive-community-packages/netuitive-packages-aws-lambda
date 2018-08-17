@@ -1,189 +1,129 @@
 {
-  "dashboard" : {
-    "name" : "AWS Lambda Element Detail Page",
-    "description" : null,
-    "layout" : null,
-    "properties" : {
-      "timeRangeDuration" : "3600",
-      "gridstackContents" : "[{\"id\":\"928f07f9-f066-4665-bc78-81dcf372d3d0\",\"x\":6,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"9b50fe17-6632-450e-8910-1e7aa2691a2c\",\"x\":0,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"fc4b02a6-c83c-48ed-8889-ca20e15b3367\",\"x\":6,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"ed1f0787-9943-4443-abbe-ed9069cae085\",\"x\":0,\"y\":27,\"width\":12,\"height\":10},{\"id\":\"321c2db2-b150-4822-b49e-a3acaa88d113\",\"x\":0,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"6a554178-a22b-4118-bfbf-dff83e6c454a\",\"x\":0,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"70e56bce-82b5-44be-bee5-edebe556ce9d\",\"x\":6,\"y\":18,\"width\":6,\"height\":9}]",
-      "refreshIntervalSeconds" : "300",
-      "wrap" : "true"
+  "dashboard": {
+    "name": "AWS Lambda Element Detail Page",
+    "private": false,
+    "properties": {
+      "gridstackContents": "[{\"id\":\"928f07f9-f066-4665-bc78-81dcf372d3d0\",\"x\":6,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"9b50fe17-6632-450e-8910-1e7aa2691a2c\",\"x\":0,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"fc4b02a6-c83c-48ed-8889-ca20e15b3367\",\"x\":6,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"ed1f0787-9943-4443-abbe-ed9069cae085\",\"x\":0,\"y\":27,\"width\":12,\"height\":10},{\"id\":\"321c2db2-b150-4822-b49e-a3acaa88d113\",\"x\":0,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"6a554178-a22b-4118-bfbf-dff83e6c454a\",\"x\":0,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"70e56bce-82b5-44be-bee5-edebe556ce9d\",\"x\":6,\"y\":18,\"width\":6,\"height\":9}]",
+      "refreshIntervalSeconds": "300",
+      "timeRangeDuration": "3600",
+      "wrap": "true"
     },
-    "widgets" : [ {
-      "id" : "928f07f9-f066-4665-bc78-81dcf372d3d0",
-      "name" : "Latency Over Time",
-      "description" : null,
-      "widgetType" : "metric-time-series",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricAggs" : "[\"avg\"]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metric_fqn" : "aws.lambda.duration",
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
+    "type": "LAMBDA",
+    "widgets": [
+      {
+        "id": "928f07f9-f066-4665-bc78-81dcf372d3d0",
+        "name": "Latency Over Time",
+        "properties": {
+          "metricAggs": "[\"avg\"]",
+          "metricLimit": "10",
+          "metric_fqn": "aws.lambda.duration",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "metric-time-series"
+      },
+      {
+        "id": "9b50fe17-6632-450e-8910-1e7aa2691a2c",
+        "name": "Attributes",
+        "properties": {
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "element-attributes"
+      },
+      {
+        "id": "fc4b02a6-c83c-48ed-8889-ca20e15b3367",
+        "name": "Invocations Over Time",
+        "properties": {
+          "metricAggs": "[\"sum\"]",
+          "metricLimit": "10",
+          "metric_fqn": "aws.lambda.invocations",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "metric-time-series"
+      },
+      {
+        "id": "ed1f0787-9943-4443-abbe-ed9069cae085",
+        "name": "Events",
+        "properties": {
+          "elementScopeTypes": "[\"Lambda\"]",
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "event-ticker"
+      },
+      {
+        "id": "321c2db2-b150-4822-b49e-a3acaa88d113",
+        "name": "Current Latency",
+        "properties": {
+          "metricLimit": "10",
+          "metric_fqn": "aws.lambda.duration",
+          "selectedTab": "table",
+          "showArea": "false",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "visualization": "chart"
+        },
+        "widgetType": "metric-status"
+      },
+      {
+        "id": "6a554178-a22b-4118-bfbf-dff83e6c454a",
+        "name": "Current Invocations",
+        "properties": {
+          "metricLimit": "10",
+          "metric_fqn": "aws.lambda.invocations",
+          "selectedTab": "table",
+          "showArea": "false",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "visualization": "chart"
+        },
+        "widgetType": "metric-status"
+      },
+      {
+        "id": "70e56bce-82b5-44be-bee5-edebe556ce9d",
+        "name": "Tags",
+        "properties": {
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "element-tags"
       }
-    }, {
-      "id" : "9b50fe17-6632-450e-8910-1e7aa2691a2c",
-      "name" : "Attributes",
-      "description" : null,
-      "widgetType" : "element-attributes",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "fc4b02a6-c83c-48ed-8889-ca20e15b3367",
-      "name" : "Invocations Over Time",
-      "description" : null,
-      "widgetType" : "metric-time-series",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricAggs" : "[\"sum\"]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metric_fqn" : "aws.lambda.invocations",
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "ed1f0787-9943-4443-abbe-ed9069cae085",
-      "name" : "Events",
-      "description" : null,
-      "widgetType" : "event-ticker",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "elementScopeTypes" : "[\"Lambda\"]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "321c2db2-b150-4822-b49e-a3acaa88d113",
-      "name" : "Current Latency",
-      "description" : null,
-      "widgetType" : "metric-status",
-      "properties" : {
-        "visualization" : "chart",
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "showArea" : "false",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metric_fqn" : "aws.lambda.duration",
-        "metricScopeTags" : "[]",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "6a554178-a22b-4118-bfbf-dff83e6c454a",
-      "name" : "Current Invocations",
-      "description" : null,
-      "widgetType" : "metric-status",
-      "properties" : {
-        "visualization" : "chart",
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "showArea" : "false",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metric_fqn" : "aws.lambda.invocations",
-        "metricScopeTags" : "[]",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "70e56bce-82b5-44be-bee5-edebe556ce9d",
-      "name" : "Tags",
-      "description" : null,
-      "widgetType" : "element-tags",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    } ],
-    "type" : "LAMBDA",
-    "private" : false
+    ]
   }
 }
