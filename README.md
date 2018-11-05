@@ -6,6 +6,7 @@ For detailed information on this package, please refer to the [online documentat
 
 ### Version next
 
+* Add metric meta for Lambda Utilization metrics
 * Adjusted build to use metricly-cli for validation
 
 ### Version 1.3.0

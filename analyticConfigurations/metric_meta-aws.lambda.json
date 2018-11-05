@@ -28,6 +28,23 @@
           },
           "validMax": 100
         }
+      },
+      {
+        "match": "aws.lambda.memory.utilization",
+        "properties": {
+          "tags": {
+            "unit": "percent"
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "aws.lambda.billed",
+        "properties": {
+          "tags": {
+            "unit": "GB-S"
+          }
+        }
       }
     ],
     "name": "AWS Lambda",
