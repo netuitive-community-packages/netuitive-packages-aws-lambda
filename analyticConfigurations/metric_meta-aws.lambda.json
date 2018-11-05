@@ -42,7 +42,7 @@
         "match": "aws.lambda.billed",
         "properties": {
           "tags": {
-            "unit": "GB-seconds"
+            "unit": "gBps"
           }
         }
       }
