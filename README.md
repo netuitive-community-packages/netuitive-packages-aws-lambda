@@ -4,6 +4,13 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
+### Version next
+
+### Version 1.4.0
+
+* Add metric meta for Lambda Utilization metrics
+* Adjusted build to use metricly-cli for validation
+
 ### Version 1.3.0
 
 * Updated element details dashboard layout

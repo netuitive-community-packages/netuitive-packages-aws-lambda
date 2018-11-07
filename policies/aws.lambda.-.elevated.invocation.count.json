@@ -1,48 +1,30 @@
 {
-  "policy" : {
-    "id" : null,
-    "name" : "AWS Lambda - Elevated Invocation Count",
-    "description" : "The number of calls to the function (invocations) have been greater than expected for at least the last 30 minutes.",
-    "scope" : {
-      "elementName" : null,
-      "elementNameExclude" : null,
-      "fqnIncludes" : [ ],
-      "fqnExcludes" : [ ],
-      "elementType" : "Lambda",
-      "elementTags" : { }
-    },
-    "duration" : 1800,
-    "conditions" : [ {
-      "metric" : "aws.lambda.invocations",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "baselineDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    }, {
-      "metric" : "aws.lambda.invocations",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "contextualDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    } ],
-    "eventConditions" : [ ],
-    "actions" : [ {
-      "type" : "event",
-      "category" : 2
-    } ],
-    "enabled" : true,
-    "deleted" : false,
-    "originTenantId" : null,
-    "originPolicyId" : null,
-    "creatorEmail" : null,
-    "lastUpdated" : null
+  "policy": {
+    "actions": [
+      {
+        "category": 2,
+        "type": "event"
+      }
+    ],
+    "conditions": [
+      {
+        "analytic": "baselineDeviation",
+        "metric": "aws.lambda.invocations",
+        "operator": ">"
+      },
+      {
+        "analytic": "contextualDeviation",
+        "metric": "aws.lambda.invocations",
+        "operator": ">"
+      }
+    ],
+    "deleted": false,
+    "description": "The number of calls to the function (invocations) have been greater than expected for at least the last 30 minutes.",
+    "duration": 1800,
+    "enabled": true,
+    "name": "AWS Lambda - Elevated Invocation Count",
+    "scope": {
+      "elementType": "Lambda"
+    }
   }
 }

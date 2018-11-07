@@ -1,48 +1,30 @@
 {
-  "policy" : {
-    "id" : null,
-    "name" : "AWS Lambda - Elevated Latency",
-    "description" : "The average duration per function call (latency) has been higher than expected for at least the past 30 minutes.",
-    "scope" : {
-      "elementName" : null,
-      "elementNameExclude" : null,
-      "fqnIncludes" : [ ],
-      "fqnExcludes" : [ ],
-      "elementType" : "Lambda",
-      "elementTags" : { }
-    },
-    "duration" : 1800,
-    "conditions" : [ {
-      "metric" : "aws.lambda.duration",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "baselineDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    }, {
-      "metric" : "aws.lambda.duration",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "contextualDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    } ],
-    "eventConditions" : [ ],
-    "actions" : [ {
-      "type" : "event",
-      "category" : 2
-    } ],
-    "enabled" : true,
-    "deleted" : false,
-    "originTenantId" : null,
-    "originPolicyId" : null,
-    "creatorEmail" : null,
-    "lastUpdated" : null
+  "policy": {
+    "actions": [
+      {
+        "category": 2,
+        "type": "event"
+      }
+    ],
+    "conditions": [
+      {
+        "analytic": "baselineDeviation",
+        "metric": "aws.lambda.duration",
+        "operator": ">"
+      },
+      {
+        "analytic": "contextualDeviation",
+        "metric": "aws.lambda.duration",
+        "operator": ">"
+      }
+    ],
+    "deleted": false,
+    "description": "The average duration per function call (latency) has been higher than expected for at least the past 30 minutes.",
+    "duration": 1800,
+    "enabled": true,
+    "name": "AWS Lambda - Elevated Latency",
+    "scope": {
+      "elementType": "Lambda"
+    }
   }
 }

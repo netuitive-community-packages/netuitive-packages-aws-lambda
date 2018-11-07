@@ -1,41 +1,56 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "METRIC_META",
-    "id" : null,
-    "packageId" : null,
-    "name" : "AWS Lambda",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : "LAMBDA",
-      "elementTags" : null,
-      "metricMatches" : null
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "aws.lambda.duration",
+        "properties": {
+          "SparseDataStrategy": "ReplaceWithZero",
+          "tags": {
+            "unit": "ms"
+          }
+        }
+      },
+      {
+        "match": "aws.lambda.(errors|invocations|throttles)",
+        "properties": {
+          "SparseDataStrategy": "ReplaceWithZero",
+          "statistic": "sum",
+          "tags": {
+            "unit": "count"
+          }
+        }
+      },
+      {
+        "match": "netuitive.*",
+        "properties": {
+          "tags": {
+            "unit": "percent"
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "aws.lambda.memory.utilization",
+        "properties": {
+          "tags": {
+            "unit": "percent"
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "aws.lambda.billed",
+        "properties": {
+          "tags": {
+            "unit": "gBps"
+          }
+        }
+      }
+    ],
+    "name": "AWS Lambda",
+    "scope": {
+      "elementType": "LAMBDA"
     },
-    "metrics" : [ {
-      "match" : "aws.lambda.duration",
-      "properties" : {
-        "SparseDataStrategy" : "ReplaceWithZero",
-        "tags" : {
-          "unit" : "ms"
-        }
-      }
-    }, {
-      "match" : "aws.lambda.(errors|invocations|throttles)",
-      "properties" : {
-        "SparseDataStrategy" : "ReplaceWithZero",
-        "statistic" : "sum",
-        "tags" : {
-          "unit" : "count"
-        }
-      }
-    }, {
-      "match" : "netuitive.*",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    } ]
+    "type": "METRIC_META"
   }
 }
