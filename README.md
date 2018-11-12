@@ -6,6 +6,8 @@ For detailed information on this package, please refer to the [online documentat
 
 ### Version next
 
+* Change the billed metric to be a sum
+
 ### Version 1.4.1
 
 * Fix the billed metric units
