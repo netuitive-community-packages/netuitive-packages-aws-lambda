@@ -6,6 +6,8 @@ For detailed information on this package, please refer to the [online documentat
 
 ### Version next
 
+### Version 1.4.2
+
 * Change the billed metric to be a sum
 
 ### Version 1.4.1
