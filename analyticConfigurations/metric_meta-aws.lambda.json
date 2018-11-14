@@ -41,6 +41,7 @@
       {
         "match": "aws.lambda.billed",
         "properties": {
+          "statistic": "sum",
           "tags": {
             "unit": "GB-seconds"
           }
