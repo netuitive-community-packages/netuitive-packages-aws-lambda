@@ -6,6 +6,8 @@ For detailed information on this package, please refer to the [online documentat
 
 ### Version next
 
+### Version 1.5.0
+
 * Convert computed metrics to new format
 
 ### Version 1.4.2
