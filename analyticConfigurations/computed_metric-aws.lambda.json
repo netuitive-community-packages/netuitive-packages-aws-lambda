@@ -4,7 +4,10 @@
       {
         "match": "netuitive.aws.lambda.errorpercent",
         "properties": {
-          "expression": "(data['aws.lambda.invocations'] == null | data['aws.lambda.invocations'].actual == 0 || data['aws.lambda.errors'] == null) ? 0 : (data['aws.lambda.errors'].actual / data['aws.lambda.invocations'].actual) * 100",
+          "expressions": [
+            "100 * ${aws.lambda.errors}.actual / ${aws.lambda.invocations}.actual",
+            "0"
+          ],
           "fqn": "netuitive.aws.lambda.errorpercent",
           "name": "Error Percent"
         }
@@ -12,7 +15,10 @@
       {
         "match": "netuitive.aws.lambda.throttlepercent",
         "properties": {
-          "expression": "(data['aws.lambda.invocations'] == null | data['aws.lambda.invocations'].actual == 0 || data['aws.lambda.throttles'] == null) ? 0 : (data['aws.lambda.throttles'].actual / (data['aws.lambda.invocations'].actual + data['aws.lambda.throttles'].actual)) * 100",
+          "expressions": [
+            "100 * ${aws.lambda.throttles}.actual / (${aws.lambda.invocations}.actual + ${aws.lambda.throttles}.actual)",
+            "0"
+          ],
           "fqn": "netuitive.aws.lambda.throttlepercent",
           "name": "Throttle Percent"
         }
