@@ -24,7 +24,9 @@
     "enabled": true,
     "name": "AWS Lambda - Depressed Invocation Count",
     "scope": {
-      "elementType": "Lambda"
+      "elementTypes": [
+        "Lambda"
+      ]
     }
   }
 }
